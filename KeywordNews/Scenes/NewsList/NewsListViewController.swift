@@ -23,7 +23,14 @@ class NewsListViewController: UIViewController {
 		let tableView = UITableView()
 		tableView.delegate = prenseter
 		tableView.dataSource = prenseter
-		tableView.register(NewsListTableViewCell.self, forCellReuseIdentifier: NewsListTableViewCell.identifier)
+		tableView.register(
+			NewsListTableViewCell.self,
+			forCellReuseIdentifier: NewsListTableViewCell.identifier
+		)
+		tableView.register(
+			NewsListTableViewHeaderView.self,
+			forHeaderFooterViewReuseIdentifier: NewsListTableViewHeaderView.identifier
+		)
 		
 		tableView.refreshControl = refeshControl
 		
