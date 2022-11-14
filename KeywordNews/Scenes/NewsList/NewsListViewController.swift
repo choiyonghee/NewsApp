@@ -61,6 +61,11 @@ extension NewsListViewController: NewsListProtocol {
 	func endRefreshing() {
 		refeshControl.endRefreshing()
 	}
+	
+	func moveToNewsWebViewController() {
+		let newsWebViewController = NewsWebViewController()
+		navigationController?.pushViewController(newsWebViewController, animated: true)
+	}
 }
 
 private extension NewsListViewController {

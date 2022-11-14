@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = scene as? UIWindowScene else { return }
 		self.window = UIWindow(windowScene: windowScene)
 		self.window?.backgroundColor = .systemBackground
+		self.window?.tintColor = .orange
 		
 		self.window?.rootViewController = UINavigationController(rootViewController: NewsListViewController())
 		self.window?.makeKeyAndVisible()

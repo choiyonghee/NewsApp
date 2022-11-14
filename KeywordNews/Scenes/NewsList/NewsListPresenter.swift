@@ -11,6 +11,7 @@ protocol NewsListProtocol: AnyObject {
 	func setupNaviationBar()
 	func setupLauyout()
 	func endRefreshing()
+	func moveToNewsWebViewController()
 }
 
 class NewsListPresenter: NSObject {
@@ -33,6 +34,8 @@ class NewsListPresenter: NSObject {
 extension NewsListPresenter: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+		
+		viewController?.moveToNewsWebViewController()
 	}
 }
 
